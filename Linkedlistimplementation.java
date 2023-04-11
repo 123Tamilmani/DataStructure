@@ -33,13 +33,15 @@ class Linkedlist
         if(head == null) return;
         Node current = head;
         if(current.next == null){
-            head.next = null;
+            head = null;
+            // head = head.next;
         }
         else{
             while(current.next.next != null){
                 current = current.next;
             }
             current.next = null;
+            // System.out.println(head.next.data);
         }
     }
 
@@ -92,7 +94,7 @@ class Linkedlist
     //Display method to display LinkedList
     public void display()
     {
-        if(head.next == null) return;
+        if(head == null) return;
         else{
             Node current = head;
             while(current != null){
@@ -123,32 +125,33 @@ public class Linkedlistimplementation{
         Linkedlist li = new Linkedlist();
         li.add(10);
         li.add(20);
-        li.add(30);
-        li.add(40);
+        // li.add(30);
+        // li.add(40);
 
-        System.out.println("Add at First");
-        li.addatfirst(50);
+        // System.out.println("Add at First");
+        // li.addatfirst(50);
         li.display();
 
-        System.out.println("Add at pos");
-        li.addatpos(2, 100);
-        li.display();
+        // System.out.println("Add at pos");
+        // li.addatpos(2, 100);
+        // li.display();
 
-        System.out.println("Delete at First");
-        li.deleteatfirst();
-        li.display();
+        // System.out.println("Delete at First");
+        // li.deleteatfirst();
+        // li.display();
 
-        System.out.println("Delete at pos");
-        li.deleteatpos(3);
-        li.display();
+        // System.out.println("Delete at pos");
+        // li.deleteatpos(3);
+        // li.display();
 
-        System.out.println("Delete at End");
+        // System.out.println("Delete at End");
         li.delete();
         li.display();
+        System.out.println("Hi");
 
-        System.out.println("Reverse");
-        li.reverse();
-        li.display();
+        // System.out.println("Reverse");
+        // li.reverse();
+        // li.display();
     }
 }
 
